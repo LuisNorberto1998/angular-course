@@ -3,14 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-nopagesfound',
   templateUrl: './nopagesfound.component.html',
-  styles: [
-  ]
+  styleUrls: [ './nopagesfound.component.css' ]
 })
-export class NopagesfoundComponent implements OnInit {
+export class NopagesfoundComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  year = new Date().getFullYear();
 
 }
