@@ -9,7 +9,8 @@ import { NopagesfoundComponent } from './errors/nopagesfound/nopagesfound.compon
 const routes: Routes = [
   // path: '/dashboard' PagesRouting
   // path: '/auth' AuthRouting
-  { path: '**', component: NopagesfoundComponent }
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '**', component: NopagesfoundComponent },
 ];
 
 @NgModule({
