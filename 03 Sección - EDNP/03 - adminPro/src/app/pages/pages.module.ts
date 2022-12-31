@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Grafica1Component } from './grafica1/grafica1.component';
 import { PagesComponent } from './pages.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,9 +25,10 @@ import { PagesComponent } from './pages.component';
     PagesComponent,
   ],
   imports: [
+    FormsModule,
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
   ],
 })
 export class PagesModule {}
