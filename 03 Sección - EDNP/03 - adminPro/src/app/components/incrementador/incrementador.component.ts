@@ -30,6 +30,7 @@ export class IncrementadorComponent implements OnInit {
 
     this.valorSalida.emit(this.progreso);
     return (this.progreso = this.progreso + valor);
+    
   }
 
   onChange(nuevoValor:any) {
