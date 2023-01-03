@@ -8,19 +8,25 @@ import { MultiDataSet, Label, Color } from 'ng2-charts';
   styles: [],
 })
 export class Grafica1Component {
+
+  public title1: string = 'Grafica1';
+  public data1 = [[350, 450, 100]];
+  public labels1 = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
+  
+  public title2: string = 'Grafica2';
+  public data2 = [[350, 450, 100]];
+  public labels2 = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
+  
+  public title3: string = 'Grafica3';
+  public data3 = [[350, 450, 100]];
+  public labels3 = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
+  
+  public title4: string = 'Grafica4';
+  public data4 = [[350, 450, 100]];
+  public labels4 = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
+
   // Doughnut
-  public doughnutChartLabels: Label[] = [
-    'Download Sales',
-    'In-Store Sales',
-    'Mail-Order Sales',
-  ];
+  // public doughnutChartLabels: Label[]
 
-  public doughnutChartData: MultiDataSet = [
-    [350, 450, 100],
-  ];
-
-  public colors:Color[] = [
-    {backgroundColor: [ '#6857E6', '#009FEE', '#F02059']}
-  ]
-
+  public doughnutChartData: MultiDataSet = [[350, 450, 100]];
 }

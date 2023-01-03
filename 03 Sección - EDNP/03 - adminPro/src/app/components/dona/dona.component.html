@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="card-body">
+
+        <!-- Sin titulo -->
+        <h3>
+            {{titleGraphic}}
+        </h3>
+
+        <div style="display: block;">
+
+            <canvas baseChart 
+                    class="chart" 
+                    [colors]="colors"
+                    [data]="dataSource" 
+                    [labels]="labelsGraphic"
+                    [chartType]="'doughnut'">
+            </canvas>
+
+        </div>
+    
+    </div>
+</div>
