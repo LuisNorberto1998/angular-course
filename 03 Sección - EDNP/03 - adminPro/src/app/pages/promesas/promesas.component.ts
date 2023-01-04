@@ -3,38 +3,42 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-promesas',
   templateUrl: './promesas.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class PromesasComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+    this.getUsuarios().then((usuario) => console.log(usuario));
 
-    const promesa = new Promise( (resolve, reject) => {
+    // const promesa = new Promise( (resolve, reject) => {
 
-      if (false) {
-        resolve('Hola Mundo');
-      } else {
-        reject('Algo salió mal');
-      }
-      
+    //   if (false) {
+    //     resolve('Hola Mundo');
+    //   } else {
+    //     reject('Algo salió mal');
+    //   }
 
-    });
+    // });
 
-    promesa.then( (mensaje) => {
-      console.log(mensaje);
-      
-    })
-    .catch( (error) => {
-      console.log("Error en mi promesa", error);
-      
-    })
+    // promesa.then( (mensaje) => {
+    //   console.log(mensaje);
 
-    console.log("Fin del init");
-    
+    // })
+    // .catch( (error) => {
+    //   console.log("Error en mi promesa", error);
 
+    // })
+
+    // console.log("Fin del init");
   }
 
+  getUsuarios() {
+    return new Promise((resolve) => {
+      fetch('https://reqres.in/api/users?page=2')
+        .then((resp) => resp.json())
+        .then((body) => resolve(body.data));
+    });
+
+  }
 }
