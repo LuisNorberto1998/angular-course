@@ -14,19 +14,19 @@
                     </a>
                     <ul aria-expanded="false" class="collapse">
                         <li>
-                            <a href="javascript:void()">My Profile </a>
+                            <a href="javascript:void()" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">My Profile </a>
                         </li>
                         <li>
-                            <a href="javascript:void()">My Balance</a>
+                            <a href="javascript:void()" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">My Balance</a>
                         </li>
                         <li>
-                            <a href="javascript:void()">Inbox</a>
+                            <a href="javascript:void()" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inbox</a>
                         </li>
                         <li>
-                            <a routerLink="account-settings" routerLinkActive="router-link-active">Account Setting</a>
+                            <a routerLink="account-settings" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Account Setting</a>
                         </li>
                         <li>
-                            <a routerLink="/login" >Logout</a>
+                            <a routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Logout</a>
                         </li>
                     </ul>
                 </li>
@@ -45,7 +45,7 @@
                     </a>
                     <ul aria-expanded="false" class="collapse">
                         <li *ngFor="let submenuItem of item.submenu">
-                            <a [routerLink]="submenuItem.url"> {{ submenuItem.title }} </a>
+                            <a [routerLink]="submenuItem.url" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"> {{ submenuItem.title }} </a>
                         </li>
                     </ul>
                 </li>
