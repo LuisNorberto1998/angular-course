@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { retry } from 'rxjs/operators';
 
 @Component({
   selector: 'app-rxjs',
@@ -11,6 +12,7 @@ export class RxjsComponent implements OnInit {
 
   constructor() {
 
+    
     
     const obs$ = new Observable( observer =>  {
       
@@ -27,13 +29,16 @@ export class RxjsComponent implements OnInit {
         }
 
         if( i === 2) {
+          i = 0;
           observer.error('i llegó a valor de 2')
         }
 
       }, 1000)
     });
 
-    obs$.subscribe( 
+    obs$.pipe(
+      retry(1)
+    ).subscribe( 
       
       valor => console.log('Subs: ', valor),
       (error) => console.warn('Error: ', error),
